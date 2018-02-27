@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.sgg.rest.model.User;
+import com.sgg.rest.model.ApplicationUser;
 import com.sgg.rest.service.UserService;
 
 
@@ -22,7 +22,7 @@ public class UserServiceTest {
 
     @Test
     public void findOne() throws Exception {
-        User u = userService.findOne(2);
+        ApplicationUser u = userService.findOne(2);
         Assert.assertEquals("someemail2@someemailprovider.com", u.getEmail());
     }
 }
